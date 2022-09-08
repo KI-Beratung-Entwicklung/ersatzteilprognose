@@ -1,9 +1,9 @@
 # Core Pkgs
 import streamlit as st
 import streamlit.components.v1 as stc 
-import streamlit-aggrid
-from streamlit-aggrid import AgGrid, GridOptionsBuilder
-from streamlit-aggrid.shared import GridUpdateMode
+import st_aggrid
+from st_aggrid import AgGrid, GridOptionsBuilder
+from st_aggrid.shared import GridUpdateMode
 #from module import *
 #from crud_operations import *
 from math import ceil
