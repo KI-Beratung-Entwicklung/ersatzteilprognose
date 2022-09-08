@@ -55,7 +55,7 @@ def aggrid_interactive_table(df: pd.DataFrame):
         df,
         enable_enterprise_modules=True,
         gridOptions=options.build(),
-        theme="streamlit",
+        theme="light",
         update_mode=GridUpdateMode.MODEL_CHANGED,
         allow_unsafe_jscode=True,
     )
@@ -222,7 +222,7 @@ def main():
                 st.header("")
 
                 st.subheader("Auflistung aller Ersatzteilaufträge")
-                selection = aggrid_interactive_table(df=df)
+                st.dataframe(df)
 
 
         if rad == "Datenvisualisierung":
@@ -403,7 +403,7 @@ def main():
                         st.write("Datenstand vom:", today)
 
                         with st.spinner('Daten werden geladen... bitte warten!'):
-                                selection = aggrid_interactive_table(df=df)
+                                st.dataframe(df)
                                 st.header('180 Tage Forecast')
                                 st.info("Die im Rahmen des 180 Tage Forecasts ermittelte Zahl gibt an, wie häufig der betrachtete Artikel im nächsten halben Jahr nachgefragt wird. Diese Information gibt dem Einkauf bzw. der eigenen Fertigung eine gewisse Vorlaufzeit, die Ersatzteile zu beschaffen bzw. zu fertigen, sodass diese zum Bedarfszeitpunkt direkt auf Lager sind.")
                                 artikelnummer = st.text_input("Artikelnummer eingeben")
