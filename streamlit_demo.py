@@ -144,9 +144,11 @@ def main():
        3037980, 3041261, 3041530, 3044550, 3039110, 3042191, 3014261,
        3032860, 3036130, 3041900, 3026030, 3038570, 3029800, 3028282,
        ]
+	
         maschinentypK03100 = df[df['Maschinennummer'].isin(maschinennummern)]
         st.sidebar.image(img)
         rad = st.sidebar.selectbox("Menü", ["Übersicht","Datenvisualisierung","Data Prediction","Kontakt"])
+	st.sidebar.text("Info: Aufgrund des Hostingsanbieters kann die Performance dieser Applikation eingeschränkt sein")
 
         if rad == "Übersicht":
 
